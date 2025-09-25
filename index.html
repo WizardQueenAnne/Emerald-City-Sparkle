@@ -21,7 +21,7 @@
       "logo": "https://www.emeraldcitysparkle.com/images/logo.png",
       "url": "https://www.emeraldcitysparkle.com",
       "telephone": "(206) 300-6614",
-      "email": "emeraldcitysparklewa@gmail.com",
+      "email": "jackodseattle@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Seattle",
@@ -1312,6 +1312,99 @@
         }
 
         /*--------------------------------------------------------------
+        # Testimonials Section
+        --------------------------------------------------------------*/
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            max-width: 90rem;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background-color: var(--light-color);
+            border-radius: var(--radius-2xl);
+            padding: 3rem;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-normal);
+            text-align: center;
+            position: relative;
+            border: 1px solid var(--grey-dark);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .stars {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stars i {
+            color: #fbbf24;
+            font-size: 2rem;
+        }
+
+        .testimonial-card blockquote {
+            font-size: 1.8rem;
+            font-style: italic;
+            color: var(--text-color);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .testimonial-card blockquote::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--primary-color);
+            position: absolute;
+            top: -1rem;
+            left: -1rem;
+            font-family: serif;
+        }
+
+        .testimonial-card blockquote::after {
+            content: '"';
+            font-size: 4rem;
+            color: var(--primary-color);
+            position: absolute;
+            bottom: -2rem;
+            right: -1rem;
+            font-family: serif;
+        }
+
+        .customer-info strong {
+            font-size: 1.6rem;
+            color: var(--dark-color);
+            font-weight: var(--font-weight-semibold);
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .testimonial-card {
+                padding: 2.5rem;
+            }
+            
+            .testimonial-card blockquote {
+                font-size: 1.6rem;
+            }
+            
+            .stars i {
+                font-size: 1.8rem;
+            }
+        }
+
+        /*--------------------------------------------------------------
         # Checkbox Styling
         --------------------------------------------------------------*/
         .checkbox-group {
@@ -1835,6 +1928,50 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials section-padding bg-light">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Customer Reviews</span>
+                <h2 class="section-title">What My Customers Say</h2>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <blockquote>
+                        "He did an excellent job and really cleaned the place up. I highly recommend his services to you."
+                    </blockquote>
+                    <div class="customer-info">
+                        <strong>Richard L.</strong>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <blockquote>
+                        "Jack is a hard worker, very conscientious, polite, easy to talk to - recommend him fully. We will call him again."
+                    </blockquote>
+                    <div class="customer-info">
+                        <strong>Ron & Molly W.</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
     <section class="services section-padding" id="services">
         <div class="container">
@@ -2067,7 +2204,7 @@
                             </div>
                             <div>
                                 <strong>Email Me</strong>
-                                <p>emeraldcitysparklewa@gmail.com</p>
+                                <p>jackodseattle@gmail.com</p>
                             </div>
                         </div>
                         
@@ -2233,7 +2370,7 @@
                     <h4>Contact Info</h4>
                     <div class="contact-info">
                         <p><i class="fas fa-phone"></i> (206) 300-6614</p>
-                        <p><i class="fas fa-envelope"></i> emeraldcitysparklewa@gmail.com</p>
+                        <p><i class="fas fa-envelope"></i> jackodseattle@gmail.com</p>
                         <p><i class="fas fa-clock"></i> Weekends & Weekday Afternoons</p>
                         <p><i class="fas fa-map-marker-alt"></i> Serving Seattle Residential Areas</p>
                     </div>
